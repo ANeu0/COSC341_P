@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Coin
   - Coin_text
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 176537485}
   m_Layer: 0
   m_Name: R_Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1631,11 +1631,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 929198541}
   speed: 2
-  stoppingDistance: 1
-  jumpForce: 1.5
-  backwardForce: 2
-  forwardForce: 5
-  waitTime: 1
+  lungeDistance: 0.5
+  lungeForce: 10
+  framesUntilLunge: 30
 --- !u!65 &891488726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1919,13 +1917,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942227546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d29f56b8b0e9344a94236361d4ceffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObj: {fileID: 0}
-  orientationTransform: {fileID: 0}
+  playerObj: {fileID: 942227546}
+  orientationTransform: {fileID: 1505563480}
   baseSpeed: 1
   jumpForce: 3
 --- !u!135 &942227553
@@ -2069,7 +2067,7 @@ GameObject:
   - component: {fileID: 1177100538}
   m_Layer: 0
   m_Name: End_Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2174,7 +2172,7 @@ GameObject:
   - component: {fileID: 1205011430}
   m_Layer: 0
   m_Name: End_Wall (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2279,7 +2277,7 @@ GameObject:
   - component: {fileID: 1230876644}
   m_Layer: 0
   m_Name: L_Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
