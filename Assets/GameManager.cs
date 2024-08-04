@@ -1,17 +1,23 @@
-using UnityEngine;
+using Assets.Scripts;
+using System;
 using TMPro;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public string technique = "";
+    public string dataFile = "GameData.csv";
     private int score = 0;
     public TextMeshProUGUI TMP_coin;
 
-    private void Awake()
+    public void init()
     {
         if (Instance == null)
         {
+            GameMain.GameStartedAt = DateTime.UtcNow;
+            GameMain.DataFileLocation = dataFile;
+            CSVHelper.initCSV(new Data(), dataFile);
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
@@ -21,19 +27,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        init();
+    }
+
     private void Start()
     {
-        UpdateScoreUI();
+
     }
 
-    public void AddScore(int value)
-    {
-        score += value;
-        UpdateScoreUI();
-    }
 
-    private void UpdateScoreUI()
-    {
-        TMP_coin.text = score.ToString();
-    }
 }

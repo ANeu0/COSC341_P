@@ -25,14 +25,12 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 viewDir = playerObj.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
         orientation.forward = viewDir.normalized;
-        Debug.Log($"Orientation forward: {orientation.forward}");
     }
 
     private void RotatePlayerObj()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        Debug.Log($"Camera: {horizontalInput}:{verticalInput}");
 
         Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
 

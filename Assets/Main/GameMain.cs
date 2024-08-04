@@ -1,17 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
-public class GameMain : MonoBehaviour
+public static class GameMain
 {
-   // Start is called before the first frame update
-    void Start()
-    {
-    }
+    public static DateTime GameStartedAt;
+    public static DateTime LastCoinEvent;
+    public static int coinCount = 0;
 
-// Update is called once per frame
-void Update()
-    {
-        
-    }
+    public static string DataFileLocation { get; internal set; }
+    public static string Technique { get; internal set; }
 }
